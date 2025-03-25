@@ -19,9 +19,10 @@ public class FlightService {
             String[][] cities = randomGenerator.randomDestinations();
             String fromCity = cities[0][0];
             String toCity = cities[1][0];
-            String[] distance = randomGenerator.calculateDistance(
+            String[] distance = new Flight().calculateDistance(
                     Double.parseDouble(cities[0][1]), Double.parseDouble(cities[0][2]),
-                    Double.parseDouble(cities[1][1]), Double.parseDouble(cities[1][2]));
+                    Double.parseDouble(cities[1][1]), Double.parseDouble(cities[1][2])
+            );
             double miles = Double.parseDouble(distance[0]);
             double km = Double.parseDouble(distance[1]);
             String schedule = createRandomFlightDateTime();
